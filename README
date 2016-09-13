@@ -1,0 +1,16 @@
+MEAN Contacts
+
+External Dependencies
+
+I added MongoDB for OS X with homebrew following this guide: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/. I then added a data directory and started a Mongo instance with the data directory as the --dbpath option.
+
+Running:
+
+Should be as simple as entering the root of the directory and running `npm start` after starting a mongoDB instance.
+
+Still TODO:
+Create contact detail view
+Create delete user capability
+Create edit user capability
+Change navbar to its own component
+Add more data per contact

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="contactsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Phone Book</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/contact/contact.module.js"></script>
+    <script src="core/contact/contact.service.js"></script>
+    <script src="contact-add/contact-add.module.js"></script>
+    <script src="contact-add/contact-add.component.js"></script>
+    <script src="contact-list/contact-list.module.js"></script>
+    <script src="contact-list/contact-list.component.js"></script>
+    <script src="contact-detail/contact-detail.module.js"></script>
+    <script src="contact-detail/contact-detail.component.js"></script>
+  </head>
+  <body>
+
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
+  </body>
+</html>
