@@ -1,0 +1,44 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          
+      <a class="navbar-brand" href="#">Phone Book</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><div class="btn-nav"><a class="btn btn-danger btn-small navbar-btn" href="#!/contacts"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form name="addContactForm" novalidate>
+          <div class="form-group has-feedback" ng-class="{'has-success': addContactForm.firstName.$valid && addContactForm.firstName.$dirty, 'has-error': addContactForm.firstName.$invalid && addContactForm.firstName.$dirty}">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" ng-model="$ctrl.contact.firstName" required>
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-ok': addContactForm.firstName.$valid && addContactForm.firstName.$dirty, 'glyphicon-remove': addContactForm.firstName.$invalid && addContactForm.firstName.$dirty}"></span>
+          </div>
+          <div class="form-group has-feedback" ng-class="{'has-success': addContactForm.lastName.$valid && addContactForm.lastName.$dirty, 'has-error': addContactForm.lastName.$invalid && addContactForm.lastName.$dirty}">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" ng-model="$ctrl.contact.lastName" required>
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-ok': addContactForm.lastName.$valid && addContactForm.lastName.$dirty, 'glyphicon-remove': addContactForm.lastName.$invalid && addContactForm.lastName.$dirty}"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary pull-left" ng-disabled="addContactForm.$invalid || addContactForm.$pristine" ng-click="$ctrl.save()">Submit</button>
+          <button type="submit" class="btn btn-danger pull-right" ng-if="$ctrl.contactId !== '0'" ng-click="$ctrl.delete()">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
