@@ -3,7 +3,7 @@
 angular.module('contactsApp', [
   'ngRoute',
   'core',
-  'contactAdd',
   'contactDetail',
   'contactList',
+  'contactSave'
 ]);

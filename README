@@ -9,8 +9,5 @@ Running:
 Should be as simple as entering the root of the directory and running `npm start` after starting a mongoDB instance.
 
 Still TODO:
-Create contact detail view
-Create delete user capability
-Create edit user capability
 Change navbar to its own component
-Add more data per contact
+Add more data per contact (make backend respond differently to all get and detail get)

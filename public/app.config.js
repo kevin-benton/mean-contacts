@@ -11,8 +11,8 @@ angular.module('contactsApp').config(['$locationProvider' ,'$routeProvider',
       when('/contacts/:contactId', {
         template: '<contact-detail></contact-detail>'
       }).
-      when('/add-contact', {
-        template: '<contact-add></contact-add>'
+      when('/contacts/save/:contactId', {
+        template: '<contact-save></contact-save>'
       }).
       otherwise('/contacts');
   }

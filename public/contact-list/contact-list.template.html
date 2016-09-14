@@ -13,7 +13,7 @@
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="#!/add-contact"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div></li>
+        <li><div class="btn-nav"><a class="btn btn-primary btn-small navbar-btn" href="#!/contacts/save/0"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div></li>
       </ul>
     </div>
   </div>
@@ -24,11 +24,10 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <ul class="list-group">
-          <li class="list-group-item" ng-repeat="contact in $ctrl.contacts">
-            <a href="#!/contacts/{{ contact._id }}">
-              <p>{{ contact.lastName }}, {{ contact.firstName }}</p>
-            </a>
-          </li>
+          <a href="#!/contacts/{{ contact._id }}" class="list-group-item" ng-repeat="contact in $ctrl.contacts">
+            <strong>{{ contact.lastName }}</strong>, {{ contact.firstName }}
+            <span class="glyphicon glyphicon-menu-right pull-right"></span>
+          </a>
         </ul>
       </div>
     </div>
